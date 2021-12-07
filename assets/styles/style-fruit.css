@@ -1,5 +1,7 @@
 .body {
     display: grid;
+    width: 100vw;
+    height: 100vw;
     /*height: 1017px;
     width: 1440px;
     /*width: 1125px;
@@ -12,18 +14,18 @@
     background-color: rgba(56, 88, 4, 0.08);
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 8em;
-    /*100px*/
+    width: 100vw;
 }
 
 
 .logo {
     display: grid;
-    height: 64px;
-    width: 64px;
+    height: 4rem;
+    width: 4rem;
     grid-column: 1/2;
     grid-row: 1/2;
-    padding: 51px;
-    margin-left: 96px;
+    padding: 3.5rem;
+    margin-left: 5rem;
 }
 
 .menu {
@@ -32,53 +34,13 @@
     grid-template-rows: 8em;
     /*100px*/
 
-    padding: 66px;
-    gap: 55px;
+    padding: 4.5rem;
+    gap: 5rem;
 }
 
-.home {
-    display: grid;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 1);
-    font-weight: 600;
-    text-decoration: underline;
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.product {
-    display: grid;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 1);
-    font-weight: 400;
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
-.about {
-    display: grid;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 1);
-    font-weight: 400;
-
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-
+.home,
+.product,
+.about,
 .manufacturing {
     display: grid;
     font-family: 'Poppins';
@@ -86,7 +48,32 @@
     font-size: 22px;
     color: rgba(0, 0, 0, 1);
     font-weight: 400;
+}
 
+.home:hover,
+.product:hover,
+.about:hover,
+.manufacturing:hover {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.home {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.product {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.about {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.manufacturing {
     grid-column: 4/5;
     grid-row: 1/2;
 }
@@ -102,60 +89,60 @@
 
 .block1 {
     display: grid;
+    width: 100vw;
     background-color: rgba(56, 88, 4, 0.08);
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 390px 240px 75px;
-    padding: 100px;
-    margin-right: 0px;
+    grid-template-rows:
+        /*390px 240px 75px*/
+        40% 30% 10%;
+    padding-top: 5rem;
 }
 
 .block1__h {
     display: grid;
     font-family: 'Poppins';
     font-style: normal;
-    font-size: 64px;
+    font-size: 4rem;
     color: rgba(38, 49, 59, 1);
     font-weight: 700;
-    line-height: 96px;
+    line-height: 6rem;
 
     grid-column: 1/3;
     grid-row: 1/2;
     align-items: stretch;
-    margin-left: 40px;
+    padding-left: 7rem;
 }
 
 .block1__text {
     display: grid;
     font-family: 'Poppins';
     font-style: normal;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: rgba(38, 49, 59, 1);
     font-weight: 400;
-    line-height: 36px;
+    line-height: 2rem;
 
     grid-column: 1/3;
     grid-row: 2/3;
     align-items: stretch;
-    margin-left: 40px;
-    margin-right: 140px;
-    margin-top: 2px;
+    padding-left: 7rem;
+    padding-right: 8rem;
 }
 
 .block1__img {
     display: grid;
-    width: 680px;
-    height: 902px;
+    width: 44rem;
+    height: 54rem;
 
     grid-column: 3/4;
     grid-row: 1/4;
-    margin-right: -60px;
 }
 
 .block1__button {
     display: grid;
     font-family: 'Poppins';
     font-style: normal;
-    font-size: 26px;
+    font-size: 1.7rem;
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
     background-color: rgba(56, 88, 4, 1);
@@ -166,17 +153,166 @@
 
     justify-items: center;
     align-items: center;
-    width: 307px;
-    margin-left: 40px;
+    width: 18.8rem;
+    margin-left: 7rem;
 
     cursor: pointer;
+}
+
+
+/* для декстопов */
+@media screen and (max-width: 1200px) {
+
+    .logo {
+        padding: 2rem;
+        margin-left: 2rem;
+    }
+
+    .menu {
+        padding: 3rem;
+        gap: 2rem;
+    }
+
+    .block1 {
+        grid-template-rows:
+            33% 33% 10%;
+        padding-top: 4rem;
+    }
+
+    .block1__h {
+        font-size: 3rem;
+        line-height: 4rem;
+        padding-left: 4rem;
+    }
+
+    .block1__text {
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        padding-left: 4rem;
+        padding-right: 3rem;
+    }
+
+    .block1__img {
+        display: grid;
+        width: 31rem;
+        height: 41rem;
+    }
+
+    .block1__button {
+        font-size: 1.2rem;
+        width: 15rem;
+        margin-left: 4rem;
+    }
+}
+
+
+/* для планшетов */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+
+    .body {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .home,
+    .product,
+    .about,
+    .manufacturing {
+        display: none;
+    }
+
+    .block1 {
+        grid-template-columns: 1fr;
+        grid-template-rows:
+            55% 55% 10%;
+        padding-top: 3rem;
+        padding-bottom: 10rem;
+    }
+
+    .block1__img {
+        display: none
+    }
+
+    .block1__h {
+        font-size: 3.5rem;
+        line-height: 5rem;
+        align-items: center;
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    .block1__text {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        align-items: center;
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    .block1__button {
+        font-size: 1.7rem;
+        width: 18.8rem;
+        margin-left: 7rem;
+    }
+
+}
+
+/* для смартфонов */
+@media screen and (max-width: 767px) {
+
+    .body {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .home,
+    .product,
+    .about,
+    .manufacturing {
+        display: none;
+    }
+
+    .block1 {
+        grid-template-columns: 1fr;
+        grid-template-rows:
+            55% 55% 10%;
+        padding-top: 3rem;
+        padding-bottom: 10rem;
+    }
+
+    .block1__img {
+        display: none
+    }
+
+    .block1__h {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        align-items: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .block1__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        align-items: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .block1__button {
+        font-size: 1.2rem;
+        width: 15rem;
+        margin-left: 3rem;
+    }
+
 }
 
 
 .block2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 15rem;
+    padding-top: 7rem;
     margin-left: 8rem;
     margin-right: 8rem;
     gap: 3rem;
@@ -265,6 +401,113 @@
     grid-column: 2/3;
     grid-row: 3/4;
 }
+
+
+
+/* для декстопов */
+@media screen and (max-width: 1200px) {}
+
+
+/* для планшетов */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+    .block2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 7rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        gap: 3rem;
+    }
+
+    .block2__h {
+        grid-column: 1/2;
+        font-size: 2.8rem;
+    }
+
+    .block2__column2 {
+        display: grid;
+        grid-column: 1/2;
+    }
+
+    .block2__text {
+        grid-row: 1/2;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        padding-bottom: 3rem;
+    }
+
+    .block2__items {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: repeat(3 1fr);
+        gap: 2rem;
+    }
+
+    .block2__element1,
+    .block2__element2,
+    .block2__element3 {
+        padding-top: 0.5rem;
+    }
+
+    .block2__item1,
+    .block2__item2,
+    .block2__item3 {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+
+}
+
+
+/* для смартфонов */
+@media screen and (max-width: 767px) {
+    .block2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 5rem;
+        margin: auto;
+        gap: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .block2__h {
+        grid-column: 1/2;
+        font-size: 1.7rem;
+    }
+
+    .block2__column2 {
+        display: grid;
+        grid-column: 1/2;
+    }
+
+    .block2__text {
+        grid-row: 1/2;
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    .block2__items {
+        display: grid;
+        grid-template-columns: 2% 10%;
+        grid-template-rows: repeat(3 1fr);
+        gap: 1rem;
+    }
+
+    .block2__element1,
+    .block2__element2,
+    .block2__element3 {
+        width: 1.2rem;
+    }
+
+    .block2__item1,
+    .block2__item2,
+    .block2__item3 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+}
+
 
 
 
