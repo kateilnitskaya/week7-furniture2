@@ -405,7 +405,29 @@
 
 
 /* для декстопов */
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    .block2 {
+        width: 100vw;
+        height: 100vw;
+        padding-top: 7rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        gap: 3rem;
+    }
+
+    .block2__h {
+        font-size: 3rem;
+    }
+
+    .block2__text {
+        display: none;
+    }
+
+    .block2__items {
+        display: none;
+    }
+
+}
 
 
 /* для планшетов */
@@ -414,8 +436,8 @@
         display: grid;
         grid-template-columns: 1fr;
         padding-top: 7rem;
-        margin-left: 5rem;
-        margin-right: 5rem;
+        /*margin-left: 5rem;
+        margin-right: 5rem;*/
         gap: 3rem;
     }
 
@@ -440,13 +462,14 @@
         display: grid;
         grid-template-columns: 10% 90%;
         grid-template-rows: repeat(3 1fr);
-        gap: 2rem;
+        gap: 0rem;
     }
 
     .block2__element1,
     .block2__element2,
     .block2__element3 {
-        padding-top: 0.5rem;
+        width: 0.2rem;
+
     }
 
     .block2__item1,
@@ -461,17 +484,24 @@
 
 /* для смартфонов */
 @media screen and (max-width: 767px) {
+
     .block2 {
+        width: 100vw;
+        height: 100vw;
         display: grid;
         grid-template-columns: 1fr;
-        padding-top: 5rem;
-        margin: auto;
-        gap: 2rem;
+
+        /*padding-top: 3rem;
         padding-left: 3rem;
         padding-right: 3rem;
+        gap: 3rem;*/
+        margin: 0;
+        padding-left: 3rem;
+
     }
 
     .block2__h {
+        display: grid;
         grid-column: 1/2;
         font-size: 1.7rem;
     }
@@ -482,29 +512,31 @@
     }
 
     .block2__text {
+        display: grid;
         grid-row: 1/2;
-        font-size: 1rem;
-        line-height: 1.6rem;
+        font-size: 0.6rem;
+        line-height: 1rem;
+        padding-bottom: 0;
     }
 
     .block2__items {
         display: grid;
-        grid-template-columns: 2% 10%;
+        grid-template-columns: 2% 5%;
         grid-template-rows: repeat(3 1fr);
-        gap: 1rem;
+        gap: 0.2rem;
     }
 
     .block2__element1,
     .block2__element2,
     .block2__element3 {
-        width: 1.2rem;
+        width: 0.5rem;
     }
 
     .block2__item1,
     .block2__item2,
     .block2__item3 {
-        font-size: 1rem;
-        line-height: 1.3rem;
+        font-size: 0.6rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -584,6 +616,155 @@
 }
 
 
+/* для декстопов */
+@media screen and (max-width: 1200px) {
+    .block3 {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: -52rem;
+        gap: 3rem;
+        width: 51rem;
+        height: 27rem;
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .block3__img {
+        width: 24rem;
+        height: 25rem;
+    }
+
+    .block3__h {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .block3__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-right: 5rem;
+        padding-top: 1rem;
+    }
+
+    .block3__button {
+        font-size: 22px;
+        width: 241px;
+        height: 63px;
+    }
+
+}
+
+
+/* для планшетов */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+    .block3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 2rem;
+        gap: 3rem;
+        width: 35rem;
+        height: 52rem;
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .block3__img {
+        display: grid;
+        grid-column: 1/2;
+        width: 28rem;
+        height: 28rem;
+        justify-self: center;
+    }
+
+    .block3__column2 {
+        display: grid;
+        grid-column: 1/2;
+        grid-template-rows: 35% 35% 20%;
+        padding-top: 0rem;
+    }
+
+
+    .block3__h {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .block3__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-right: 5rem;
+        padding-top: 1rem;
+    }
+
+    .block3__button {
+        font-size: 22px;
+        width: 241px;
+        height: 63px;
+    }
+}
+
+
+/* для смартфонов */
+@media screen and (max-width: 767px) {
+    .block3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 0rem;
+        gap: 3rem;
+        width: 19rem;
+        height: 52rem;
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .block3__img {
+        display: grid;
+        grid-column: 1/2;
+        width: 18rem;
+        height: 18rem;
+        justify-self: center;
+    }
+
+    .block3__column2 {
+        display: grid;
+        grid-column: 1/2;
+        grid-template-rows: 35% 35% 20%;
+        padding-top: 0rem;
+    }
+
+
+    .block3__h {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    .block3__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-right: 5rem;
+        padding-top: 1rem;
+    }
+
+    .block3__button {
+        font-size: 22px;
+        width: 241px;
+        height: 63px;
+    }
+}
+
+
+
 
 .block4 {
     display: grid;
@@ -606,6 +787,10 @@
 
     grid-column: 1/5;
     grid-row: 1/2;
+}
+
+.block4__h2 {
+    display: none;
 }
 
 .block4__img-living {
@@ -710,11 +895,122 @@
     margin-right: 96px;
 }
 
+
+/* для декстопов */
+@media screen and (max-width: 1200px) {
+    .block4 {
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 300px 210px 200px;
+    }
+
+    .block4__h {
+        font-size: 3.5rem;
+        margin-top: 5rem;
+    }
+
+}
+
+
+/* для планшетов */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+    .block4__h2 {
+        display: grid;
+        width: 100vw;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-size: 3.5rem;
+        color: rgba(38, 49, 59, 1);
+        font-weight: 700;
+        text-align: center;
+
+        margin-top: 5rem;
+        margin-bottom: -10rem;
+    }
+
+    .block4 {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 210px 200px;
+        margin-bottom: 3rem;
+    }
+
+    .block4__h {
+        display: none;
+    }
+
+    .block4__kitchen,
+    .block4__img-kitchen {
+        display: none;
+    }
+
+    .block4__img-living {
+        margin-left: 1rem;
+    }
+
+    .block4__living {
+        margin-left: 2.5rem;
+    }
+
+}
+
+
+/* для смартфонов */
+@media screen and (max-width: 767px) {
+    .block4__h2 {
+        display: grid;
+        width: 100vw;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-size: 1.5rem;
+        color: rgba(38, 49, 59, 1);
+        font-weight: 700;
+        text-align: center;
+
+        margin-top: 5rem;
+        margin-bottom: -10rem;
+    }
+
+    .block4 {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 210px 200px;
+        margin-bottom: 3rem;
+    }
+
+    .block4__h {
+        display: none;
+    }
+
+    .block4__kitchen,
+    .block4__img-kitchen,
+    .block4__terrace,
+    .block4__img-terrace {
+        display: none;
+    }
+
+    .block4__img-living {
+        margin-left: 0.2rem;
+    }
+
+    .block4__living {
+        margin-left: 2rem;
+    }
+
+}
+
+
+
+
+
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
     grid-template-rows: 200px 200px;
     background-color: rgba(56, 88, 4, 0.08);
+    width: 100vw;
 }
 
 .footer__menu {
@@ -801,4 +1097,36 @@
 
     margin-top: -83px;
     margin-right: 200px;
+}
+
+/* для декстопов */
+@media screen and (max-width: 1200px) {
+
+    .footer__menu-join,
+    .footer__menu-email,
+    .footer-element1,
+    .footer-element2 {
+        display: none;
+    }
+
+}
+
+
+/* для планшетов */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+
+    .footer__menu-join,
+    .footer__menu-email,
+    .footer-element1,
+    .footer-element2 {
+        display: none;
+    }
+}
+
+
+/* для смартфонов */
+@media screen and (max-width: 767px) {
+    .footer {
+        display: none;
+    }
 }
